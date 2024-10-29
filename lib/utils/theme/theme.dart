@@ -1,3 +1,4 @@
+import 'package:coffee_app/utils/theme/custom_theme/elevatedButton_theme.dart';
 import 'package:coffee_app/utils/theme/custom_theme/text_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,8 @@ class AppTheme {
     brightness: Brightness.light,
     scaffoldBackgroundColor: Colors.white,
     textTheme: textTheme.lightTextTheme,
-    primaryColor: const Color(0xff967259)
+    primaryColor: const Color(0xff967259),
+    elevatedButtonTheme: elevatedButtonTheme.lightElevatedButton
   );
   static ThemeData darkTheme = ThemeData(
      useMaterial3: true,
@@ -18,7 +20,8 @@ class AppTheme {
     brightness: Brightness.dark,
     scaffoldBackgroundColor: Colors.black,
     textTheme: textTheme.darkTextTheme,
-    primaryColor: const Color(0xff967259)
+    primaryColor: const Color(0xff967259),
+    elevatedButtonTheme: elevatedButtonTheme.darkElevatedButton
   );
 
 }
