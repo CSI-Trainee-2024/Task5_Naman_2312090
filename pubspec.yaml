@@ -1,0 +1,73 @@
+name: coffee_app
+description: "A new Flutter project."
+
+
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.4 <4.0.0'
+
+#---------PACKAGES-------------#
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UTILITY PACAKES
+
+  #Icons
+  cupertino_icons: ^1.0.6
+  #font_awesome_flutter: ^10.7.0
+
+  #State Management
+
+  #Product Specific
+
+#---------./ PACKAGES-------------#
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+
+flutter:
+  
+  uses-material-design: true
+
+  #---------LOCAL ASSETS-------------#
+  assets:
+    - assets/images/
+    - assets/logos/
+
+  #---------LOCAL FONTS-------------#
+  fonts:
+    - family: Popplins
+      fonts:
+        - asset: assets/fonts/Poppins-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Poppins-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-MediumItaic.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 800
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+  
