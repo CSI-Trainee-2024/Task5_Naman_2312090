@@ -1,3 +1,4 @@
+import 'package:coffee_app/utils/constants/colors.dart';
 import 'package:coffee_app/utils/theme/custom_theme/text_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -7,10 +8,10 @@ class elevatedButtonTheme {
   static ElevatedButtonThemeData lightElevatedButton = ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
           elevation: 0,
-          foregroundColor: Colors.white,
-          backgroundColor: const Color(0xff967259),
-          disabledBackgroundColor: Colors.grey,
-          disabledForegroundColor: Colors.grey,
+          foregroundColor: colors.primaryColor,
+          backgroundColor: colors.mainColor,
+          disabledBackgroundColor: colors.geryColor,
+          disabledForegroundColor: colors.geryColor,
           padding: EdgeInsets.symmetric(vertical: 14),
           textStyle: textTheme.lightTextTheme.titleSmall,
           shape:
@@ -19,10 +20,10 @@ class elevatedButtonTheme {
   static ElevatedButtonThemeData darkElevatedButton = ElevatedButtonThemeData(
      style: ElevatedButton.styleFrom(
           elevation: 0,
-          foregroundColor: Colors.black,
-          backgroundColor: const Color(0xff967259),
-          disabledBackgroundColor: Colors.grey,
-          disabledForegroundColor: Colors.grey,
+          foregroundColor: colors.secondaryColor,
+          backgroundColor: colors.mainColor,
+          disabledBackgroundColor: colors.geryColor,
+          disabledForegroundColor: colors.geryColor,
           padding: EdgeInsets.symmetric(vertical: 14),
           textStyle: textTheme.lightTextTheme.titleSmall,
           shape:

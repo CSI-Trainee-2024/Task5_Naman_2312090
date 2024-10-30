@@ -1,3 +1,4 @@
+import 'package:coffee_app/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class bottomSheetTheme {
@@ -5,7 +6,7 @@ class bottomSheetTheme {
 
   static BottomSheetThemeData lightBottomSheet = BottomSheetThemeData(
     showDragHandle: true,
-    backgroundColor: Color(0xffECE0D1),
+    backgroundColor: colors.splashColor,
     constraints: const BoxConstraints(minWidth: double.infinity),
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16))
   );

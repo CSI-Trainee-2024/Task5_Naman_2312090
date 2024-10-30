@@ -1,3 +1,4 @@
+import 'package:coffee_app/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -9,18 +10,18 @@ class checkBoxTheme {
       checkColor: WidgetStateProperty.resolveWith(
         (states) {
           if (states.contains(WidgetState.selected)) {
-            return Colors.white;
+            return colors.primaryColor;
           } else {
-            return Colors.black;
+            return colors.secondaryColor;
           }
         },
       ),
       fillColor: WidgetStateProperty.resolveWith(
         (states) {
           if (states.contains(WidgetState.selected)) {
-            return const Color(0xff967259);
+            return colors.mainColor;
           } else {
-            return Colors.white;
+            return colors.primaryColor;
           }
         },
       ));

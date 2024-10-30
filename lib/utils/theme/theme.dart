@@ -1,3 +1,4 @@
+import 'package:coffee_app/utils/constants/colors.dart';
 import 'package:coffee_app/utils/theme/custom_theme/appBar_theme.dart';
 import 'package:coffee_app/utils/theme/custom_theme/bottomSheet_theme.dart';
 import 'package:coffee_app/utils/theme/custom_theme/checkBox_theme.dart';
@@ -13,9 +14,9 @@ class AppTheme {
     useMaterial3: true,
     fontFamily: 'Poppins',
     brightness: Brightness.light,
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: colors.primaryColor,
     textTheme: textTheme.lightTextTheme,
-    primaryColor: const Color(0xff967259),
+    primaryColor: colors.mainColor,
     elevatedButtonTheme: elevatedButtonTheme.lightElevatedButton,
     checkboxTheme: checkBoxTheme.lightCheckBox,
     chipTheme: chipTheme.lightChipTheme,
@@ -27,9 +28,9 @@ class AppTheme {
      useMaterial3: true,
     fontFamily: 'Poppins',
     brightness: Brightness.dark,
-    scaffoldBackgroundColor: Colors.black,
+    scaffoldBackgroundColor: colors.secondaryColor,
     textTheme: textTheme.darkTextTheme,
-    primaryColor: const Color(0xff967259),
+    primaryColor: colors.mainColor,
     elevatedButtonTheme: elevatedButtonTheme.darkElevatedButton
   );
 
