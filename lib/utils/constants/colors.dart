@@ -9,4 +9,6 @@ class colors {
   static const Color secondaryColor = Color(0xff000000);
   static const Color transparentColor = Colors.transparent;
   static const Color geryColor = Colors.grey;
+
+ // static const Gradient linearGradient = LinearGradient(colors: []);
 }
