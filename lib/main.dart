@@ -1,3 +1,4 @@
+import 'package:coffee_app/screens/splash.dart';
 import 'package:coffee_app/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -11,26 +12,23 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      home: MyHomePage(),
+      home: splashScreen(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-    );
+    return splashScreen();
   }
 }

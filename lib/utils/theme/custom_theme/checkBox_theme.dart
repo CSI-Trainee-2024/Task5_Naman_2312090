@@ -6,7 +6,7 @@ class checkBoxTheme {
   checkBoxTheme._();
 
   static CheckboxThemeData lightCheckBox = CheckboxThemeData(
-      shape: CircleBorder(eccentricity: 3),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       checkColor: WidgetStateProperty.resolveWith(
         (states) {
           if (states.contains(WidgetState.selected)) {

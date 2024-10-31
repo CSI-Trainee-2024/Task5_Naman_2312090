@@ -7,7 +7,7 @@ class textTheme {
   static TextTheme lightTextTheme = TextTheme(
     headlineLarge: const TextStyle().copyWith(fontSize: 32,fontWeight: FontWeight.bold,color: colors.secondaryColor),
     headlineMedium: const TextStyle().copyWith(fontSize: 24,fontWeight: FontWeight.w600,color: colors.secondaryColor),
-    headlineSmall: const TextStyle().copyWith(fontSize: 16,fontWeight: FontWeight.w600,color: colors.secondaryColor),
+    headlineSmall: const TextStyle().copyWith(fontSize: 16,fontWeight: FontWeight.w400,color: colors.secondaryColor),
 
     titleLarge: const TextStyle().copyWith(fontSize: 20,fontWeight: FontWeight.w700,color: colors.primaryColor),
     titleMedium: const TextStyle().copyWith(fontSize: 16,fontWeight: FontWeight.normal,color: colors.primaryColor),

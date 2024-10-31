@@ -16,7 +16,7 @@ dependencies:
   # UTILITY PACAKES
 
   #Icons
-  cupertino_icons: ^1.0.6
+  #cupertino_icons: ^1.0.6
   font_awesome_flutter: ^10.7.0
 
   #State Management
@@ -39,7 +39,6 @@ flutter:
   #---------LOCAL ASSETS-------------#
   assets:
     - assets/images/
-    - assets/logos/
 
   #---------LOCAL FONTS-------------#
   fonts:
@@ -53,8 +52,8 @@ flutter:
           style: italic
         - asset: assets/fonts/Poppins-Medium.ttf
           weight: 500
-        - asset: assets/fonts/Poppins-MediumItaic.ttf
-          weight: 500
+        #- asset: assets/fonts/Poppins-MediumItaic.ttf
+        #  weight: 500
         - asset: assets/fonts/Poppins-SemiBold.ttf
           weight: 600
         - asset: assets/fonts/Poppins-Bold.ttf
