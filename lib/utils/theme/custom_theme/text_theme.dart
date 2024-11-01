@@ -29,6 +29,6 @@ class textTheme {
 
     bodyLarge: const TextStyle().copyWith(fontSize: 16,fontWeight: FontWeight.w500,color: colors.primaryColor),
     bodyMedium: const TextStyle().copyWith(fontSize: 14,fontWeight: FontWeight.normal,color: colors.primaryColor),
-    bodySmall: const TextStyle().copyWith(fontSize: 14,fontWeight: FontWeight.w400,color: colors.primaryColor.withOpacity(0.7))
+    bodySmall: const TextStyle().copyWith(fontSize: 20,fontWeight: FontWeight.w400,color: colors.primaryColor.withOpacity(0.7))
   );
 }
