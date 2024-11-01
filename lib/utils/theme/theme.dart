@@ -1,6 +1,7 @@
 import 'package:coffee_app/utils/constants/colors.dart';
 import 'package:coffee_app/utils/theme/custom_theme/appBar_theme.dart';
 import 'package:coffee_app/utils/theme/custom_theme/bottomSheet_theme.dart';
+import 'package:coffee_app/utils/theme/custom_theme/bottom_theme.dart';
 import 'package:coffee_app/utils/theme/custom_theme/checkBox_theme.dart';
 import 'package:coffee_app/utils/theme/custom_theme/chipTheme.dart';
 import 'package:coffee_app/utils/theme/custom_theme/elevatedButton_theme.dart';
@@ -22,6 +23,7 @@ class AppTheme {
     chipTheme: chipTheme.lightChipTheme,
     bottomSheetTheme: bottomSheetTheme.lightBottomSheet,
     appBarTheme: appBarTheme.lightAppBArTheme,
+    bottomNavigationBarTheme:bottomTheme.lightBottomTheme, 
     //inputDecorationTheme:
   );
   static ThemeData darkTheme = ThemeData(

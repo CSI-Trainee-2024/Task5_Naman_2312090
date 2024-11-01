@@ -1,5 +1,5 @@
+import 'package:coffee_app/utils/theme/custom_theme/text_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class homePage extends StatefulWidget {
   @override
@@ -9,17 +9,18 @@ class homePage extends StatefulWidget {
 class _homePageState extends State<homePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(80),
-          child: Container(
-            padding: const EdgeInsets.only(left: 25, right: 25, top: 15),
-            child: AppBar(
-              leading:
-                  IconButton(onPressed: () {}, icon: const Icon(Icons.apps)),
-              actions: const [Icon(Icons.person)],
-            ),
-          )),
+    return ListView(
+      padding: const EdgeInsets.all(20),
+      children: [
+        Text(
+          "Find the best \nCoffee to your taste",
+          style: textTheme.lightTextTheme.headlineLarge,
+        ),
+        TextField(
+          
+        )
+
+      ],
     );
   }
 }
