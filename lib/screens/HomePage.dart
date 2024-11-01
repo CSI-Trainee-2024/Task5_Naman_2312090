@@ -1,3 +1,4 @@
+import 'package:coffee_app/subScreens/coffee.dart';
 import 'package:coffee_app/utils/constants/colors.dart';
 import 'package:coffee_app/utils/theme/custom_theme/text_theme.dart';
 import 'package:flutter/material.dart';
@@ -20,15 +21,18 @@ class _homePageState extends State<homePage> {
         TextField(
           decoration: InputDecoration(
               hintText: "Find your coffee...",
+              prefixIcon: Icon(Icons.search),
               hintStyle: textTheme.lightTextTheme.bodySmall,
               enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
-                  borderSide: BorderSide(width: 2)),
+                  borderSide: const BorderSide(width: 2)),
               enabled: true,
               focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
-                  borderSide: BorderSide(color: colors.mainColor, width: 2))),
-        )
+                  borderSide:
+                      const BorderSide(color: colors.mainColor, width: 2))),
+        ),
+        coffee(),
       ],
     );
   }
