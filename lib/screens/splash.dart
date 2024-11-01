@@ -14,6 +14,7 @@ class _splashScreenState extends State<splashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        padding: EdgeInsets.all(20),
         height: double.infinity,
         width: double.infinity,
         decoration: const BoxDecoration(
@@ -23,21 +24,39 @@ class _splashScreenState extends State<splashScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset("assets/images/splash.png"),
-            Text(
-              "Stay Focused",
-              style: textTheme.lightTextTheme.headlineLarge,
+            Image.asset(
+              fit: BoxFit.fill,
+              "assets/images/splash.png",
             ),
-            Text(
-              "Get the cup filled of your choice to stay focused and awake. Different type of coffee menu, hot lottee cappucino.",
-              style: textTheme.lightTextTheme.headlineSmall,
+            Column(
+              children: [
+                Text(
+                  "Stay Focused",
+                  textAlign: TextAlign.center,
+                  style: textTheme.lightTextTheme.headlineLarge,
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  textAlign: TextAlign.center,
+                  "Get the cup filled of your choice to stay focused and awake. Different type of coffee menu, hot lottee cappucino.",
+                  style: textTheme.lightTextTheme.headlineSmall,
+                ),
+              ],
             ),
             ElevatedButton(
                 onPressed: () {},
-                child: Row(
-                  // mainAxisSize: MainAxisSize.min,
+                child: const Row(
+                  mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [Text("Dive"), FaIcon(FontAwesomeIcons.arrowRight)],
+                  children: [
+                    Text("Dive In"),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    FaIcon(FontAwesomeIcons.arrowRight)
+                  ],
                 ))
           ],
         ),

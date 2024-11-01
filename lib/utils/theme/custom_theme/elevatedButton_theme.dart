@@ -7,26 +7,28 @@ class elevatedButtonTheme {
 
   static ElevatedButtonThemeData lightElevatedButton = ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-          elevation: 0,
-          foregroundColor: colors.primaryColor,
-          backgroundColor: colors.mainColor,
-          disabledBackgroundColor: colors.geryColor,
-          disabledForegroundColor: colors.geryColor,
-          padding: EdgeInsets.symmetric(vertical: 14),
-          textStyle: textTheme.lightTextTheme.titleSmall,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))));
+    //minimumSize: Size(60, 20),
+    elevation: 8.0,
+    foregroundColor: colors.primaryColor,
+    backgroundColor: colors.mainColor,
+    disabledBackgroundColor: colors.geryColor,
+    disabledForegroundColor: colors.geryColor,
+    padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 22),
+    textStyle: textTheme.lightTextTheme.headlineMedium,
+    // shape:
+    //     RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))
+  ));
 
   static ElevatedButtonThemeData darkElevatedButton = ElevatedButtonThemeData(
-     style: ElevatedButton.styleFrom(
-          elevation: 0,
-          foregroundColor: colors.secondaryColor,
-          backgroundColor: colors.mainColor,
-          disabledBackgroundColor: colors.geryColor,
-          disabledForegroundColor: colors.geryColor,
-          padding: EdgeInsets.symmetric(vertical: 14),
-          textStyle: textTheme.lightTextTheme.titleSmall,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)))
-  );
+      style: ElevatedButton.styleFrom(
+    elevation: 8.0,
+    foregroundColor: colors.secondaryColor,
+    backgroundColor: colors.mainColor,
+    disabledBackgroundColor: colors.geryColor,
+    disabledForegroundColor: colors.geryColor,
+    padding: const EdgeInsets.symmetric(vertical: 14,horizontal: 22),
+    textStyle: textTheme.lightTextTheme.headlineMedium,
+    // shape:
+    //     RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))
+  ));
 }
