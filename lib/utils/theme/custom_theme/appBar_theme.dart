@@ -12,7 +12,7 @@ class appBarTheme {
     centerTitle: true,
     backgroundColor: colors.transparentColor,
     surfaceTintColor: colors.transparentColor,
-    iconTheme: IconThemeData(color: colors.mainColor,size: 24),
+    iconTheme: IconThemeData(color: colors.mainColor,size: 35),
     titleTextStyle: TextStyle(fontSize: 20.0,fontWeight: FontWeight.bold,color: colors.secondaryColor)
   );
 

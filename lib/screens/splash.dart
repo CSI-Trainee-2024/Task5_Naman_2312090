@@ -1,3 +1,4 @@
+import 'package:coffee_app/screens/HomePage.dart';
 import 'package:coffee_app/utils/constants/colors.dart';
 import 'package:coffee_app/utils/theme/custom_theme/elevatedButton_theme.dart';
 import 'package:coffee_app/utils/theme/custom_theme/text_theme.dart';
@@ -46,7 +47,10 @@ class _splashScreenState extends State<splashScreen> {
               ],
             ),
             ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => homePage()));
+                },
                 child: const Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
