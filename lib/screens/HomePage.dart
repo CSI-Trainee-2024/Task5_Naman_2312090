@@ -32,7 +32,7 @@ class _homePageState extends State<homePage> {
                   borderSide:
                       const BorderSide(color: colors.mainColor, width: 2))),
         ),
-        coffee(),
+        CoffeeSelection(),
       ],
     );
   }
