@@ -18,6 +18,9 @@ class _homePageState extends State<homePage> {
           "Find the best \nCoffee to your taste",
           style: textTheme.lightTextTheme.headlineLarge,
         ),
+        SizedBox(
+          height: 10,
+        ),
         TextField(
           decoration: InputDecoration(
               hintText: "Find your coffee...",
