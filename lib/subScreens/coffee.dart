@@ -13,8 +13,9 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
   final List<Map<String, String>> coffeeData = [
     {
       "name": "Espresso",
+      "price": "\$4.20",
       "description1": "Bold Flavor, Pure Energy.",
-      "description2": "Richness in Every Sip.",
+      "description2": "Richness in Every Sip you drink.",
       "description3": "Crafted for Coffee Lovers.",
       "description4": "Instant Boost, Lasting Flavor.",
       "description5": "Elevate Your Coffee Experience.",
@@ -28,6 +29,7 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
     },
     {
       "name": "Latte",
+      "price": "\$6.40",
       "description1": "Smooth and creamy Delight.",
       "description2": "Your Cozy Coffee Companion.",
       "description3": "A Warm Hug in a Cup.",
@@ -43,6 +45,7 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
     },
     {
       "name": "Cappuccino",
+      "price": "\$7.00",
       "description1": "Cappuccino: Foam Your Day.",
       "description2": "Sip, Smile, Repeat.",
       "description3": "Awaken Your Senses Today.",
@@ -58,6 +61,7 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
     },
     {
       "name": "Cafetiere",
+      "price": "\$5.70",
       "description1": "Rich, full-bodied coffee.",
       "description2": "Savor the French Press Magic.",
       "description3": "Awaken Your Senses, Press On.",
@@ -129,11 +133,11 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         SizedBox(
-          height: MediaQuery.of(context).size.height * 0.95,
+          height: MediaQuery.of(context).size.height * 1.07,
           child: Expanded(
             child: GridView(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, childAspectRatio: 0.7),
+                  crossAxisCount: 2, childAspectRatio: 0.61),
               children: [
                 Card(
                   elevation: 4,
@@ -164,6 +168,17 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                           selectedCoffee!["description1"]!,
                           style: textTheme.lightTextTheme.bodySmall,
                         ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              selectedCoffee!["price"]!,
+                              style: textTheme.lightTextTheme.bodyLarge,
+                            ),
+                          ],
+                        )
                       ],
                     ),
                   ),
@@ -197,6 +212,13 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                           selectedCoffee!["description2"]!,
                           style: textTheme.lightTextTheme.bodySmall,
                         ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Text(
+                          selectedCoffee!["price"]!,
+                          style: textTheme.lightTextTheme.bodyLarge,
+                        )
                       ],
                     ),
                   ),
@@ -230,6 +252,13 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                           selectedCoffee!["description3"]!,
                           style: textTheme.lightTextTheme.bodySmall,
                         ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Text(
+                          selectedCoffee!["price"]!,
+                          style: textTheme.lightTextTheme.bodyLarge,
+                        )
                       ],
                     ),
                   ),
@@ -263,6 +292,13 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                           selectedCoffee!["description4"]!,
                           style: textTheme.lightTextTheme.bodySmall,
                         ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Text(
+                          selectedCoffee!["price"]!,
+                          style: textTheme.lightTextTheme.bodyLarge,
+                        )
                       ],
                     ),
                   ),
@@ -296,6 +332,13 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                           selectedCoffee!["description5"]!,
                           style: textTheme.lightTextTheme.bodySmall,
                         ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Text(
+                          selectedCoffee!["price"]!,
+                          style: textTheme.lightTextTheme.bodyLarge,
+                        )
                       ],
                     ),
                   ),
@@ -329,6 +372,13 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                           selectedCoffee!["description6"]!,
                           style: textTheme.lightTextTheme.bodySmall,
                         ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Text(
+                          selectedCoffee!["price"]!,
+                          style: textTheme.lightTextTheme.bodyLarge,
+                        )
                       ],
                     ),
                   ),
