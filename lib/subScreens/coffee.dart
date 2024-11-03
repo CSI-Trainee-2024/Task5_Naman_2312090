@@ -47,7 +47,7 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
       "name": "Cappuccino",
       "price": "\$7.00",
       "description1": "Cappuccino: Foam Your Day.",
-      "description2": "Sip, Smile, Repeat.",
+      "description2": "Sip, Smile, Repeat again.",
       "description3": "Awaken Your Senses Today.",
       "description4": "Indulge in Creamy Perfection.",
       "description5": "Warmth in Every Mug.",
@@ -168,15 +168,32 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                           selectedCoffee!["description1"]!,
                           style: textTheme.lightTextTheme.bodySmall,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10.0,
                         ),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
                               selectedCoffee!["price"]!,
                               style: textTheme.lightTextTheme.bodyLarge,
                             ),
+                            SizedBox(
+                              width: 60,
+                              height: 36,
+                              child: MaterialButton(
+                                onPressed: () {},
+                                child: Icon(
+                                  Icons.add,
+                                  size: 30,
+                                ),
+                                color: colors.mainColor,
+                                shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(30),
+                                        bottomRight: Radius.circular(30))),
+                              ),
+                            )
                           ],
                         )
                       ],
@@ -212,12 +229,33 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                           selectedCoffee!["description2"]!,
                           style: textTheme.lightTextTheme.bodySmall,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10.0,
                         ),
-                        Text(
-                          selectedCoffee!["price"]!,
-                          style: textTheme.lightTextTheme.bodyLarge,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              selectedCoffee!["price"]!,
+                              style: textTheme.lightTextTheme.bodyLarge,
+                            ),
+                            SizedBox(
+                              width: 60,
+                              height: 36,
+                              child: MaterialButton(
+                                onPressed: () {},
+                                child: Icon(
+                                  Icons.add,
+                                  size: 30,
+                                ),
+                                color: colors.mainColor,
+                                shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(30),
+                                        bottomRight: Radius.circular(30))),
+                              ),
+                            )
+                          ],
                         )
                       ],
                     ),
@@ -252,12 +290,33 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                           selectedCoffee!["description3"]!,
                           style: textTheme.lightTextTheme.bodySmall,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10.0,
                         ),
-                        Text(
-                          selectedCoffee!["price"]!,
-                          style: textTheme.lightTextTheme.bodyLarge,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              selectedCoffee!["price"]!,
+                              style: textTheme.lightTextTheme.bodyLarge,
+                            ),
+                            SizedBox(
+                              width: 60,
+                              height: 36,
+                              child: MaterialButton(
+                                onPressed: () {},
+                                child: Icon(
+                                  Icons.add,
+                                  size: 30,
+                                ),
+                                color: colors.mainColor,
+                                shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(30),
+                                        bottomRight: Radius.circular(30))),
+                              ),
+                            )
+                          ],
                         )
                       ],
                     ),
@@ -292,12 +351,33 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                           selectedCoffee!["description4"]!,
                           style: textTheme.lightTextTheme.bodySmall,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10.0,
                         ),
-                        Text(
-                          selectedCoffee!["price"]!,
-                          style: textTheme.lightTextTheme.bodyLarge,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              selectedCoffee!["price"]!,
+                              style: textTheme.lightTextTheme.bodyLarge,
+                            ),
+                            SizedBox(
+                              width: 60,
+                              height: 36,
+                              child: MaterialButton(
+                                onPressed: () {},
+                                child: Icon(
+                                  Icons.add,
+                                  size: 30,
+                                ),
+                                color: colors.mainColor,
+                                shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(30),
+                                        bottomRight: Radius.circular(30))),
+                              ),
+                            )
+                          ],
                         )
                       ],
                     ),
@@ -332,12 +412,33 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                           selectedCoffee!["description5"]!,
                           style: textTheme.lightTextTheme.bodySmall,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10.0,
                         ),
-                        Text(
-                          selectedCoffee!["price"]!,
-                          style: textTheme.lightTextTheme.bodyLarge,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              selectedCoffee!["price"]!,
+                              style: textTheme.lightTextTheme.bodyLarge,
+                            ),
+                            SizedBox(
+                              width: 60,
+                              height: 36,
+                              child: MaterialButton(
+                                onPressed: () {},
+                                child: Icon(
+                                  Icons.add,
+                                  size: 30,
+                                ),
+                                color: colors.mainColor,
+                                shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(30),
+                                        bottomRight: Radius.circular(30))),
+                              ),
+                            )
+                          ],
                         )
                       ],
                     ),
@@ -372,12 +473,33 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                           selectedCoffee!["description6"]!,
                           style: textTheme.lightTextTheme.bodySmall,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10.0,
                         ),
-                        Text(
-                          selectedCoffee!["price"]!,
-                          style: textTheme.lightTextTheme.bodyLarge,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              selectedCoffee!["price"]!,
+                              style: textTheme.lightTextTheme.bodyLarge,
+                            ),
+                            SizedBox(
+                              width: 60,
+                              height: 36,
+                              child: MaterialButton(
+                                onPressed: () {},
+                                child: Icon(
+                                  Icons.add,
+                                  size: 30,
+                                ),
+                                color: colors.mainColor,
+                                shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(30),
+                                        bottomRight: Radius.circular(30))),
+                              ),
+                            )
+                          ],
                         )
                       ],
                     ),
@@ -410,7 +532,7 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                         fit: BoxFit.cover,
                         image: AssetImage(selectedCoffee!["image3"]!))),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10.0,
               ),
               Text(

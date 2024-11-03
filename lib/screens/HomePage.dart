@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 class homePage extends StatefulWidget {
   @override
   State<homePage> createState() => _homePageState();
+  //CoffeeSelection coffeeSelection = CoffeeSelection();
 }
 
 class _homePageState extends State<homePage> {
@@ -22,6 +23,7 @@ class _homePageState extends State<homePage> {
           height: 10,
         ),
         TextField(
+         // onChanged: (value) => CoffeeSelection.new.runFilter(value),
           decoration: InputDecoration(
               hintText: "Find your coffee...",
               prefixIcon: Icon(Icons.search),
