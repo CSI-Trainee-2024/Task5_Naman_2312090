@@ -34,7 +34,12 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
       "description4": "Comfort in Every Creamy Sip",
       "description5": "Elevate Your Coffee Ritual.",
       "description6": "Indulge in Every Sip.",
-      "image": "assets/images/latte.png",
+      "image1": "assets/images/latte1.png",
+      "image2": "assets/images/latte2.png",
+      "image3": "assets/images/latte3.png",
+      "image4": "assets/images/latte4.png",
+      "image5": "assets/images/latte5.png",
+      "image6": "assets/images/latte6.png",
     },
     {
       "name": "Cappuccino",
@@ -44,7 +49,12 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
       "description4": "Indulge in Creamy Perfection.",
       "description5": "Warmth in Every Mug.",
       "description6": "Savor the Creamy Dream.",
-      "image": "assets/images/cappuccino.png",
+      "image1": "assets/images/capp1.png",
+      "image2": "assets/images/capp2.png",
+      "image3": "assets/images/capp3.png",
+      "image4": "assets/images/capp4.png",
+      "image5": "assets/images/capp5.png",
+      "image6": "assets/images/capp6.png",
     },
     {
       "name": "Cafetiere",
@@ -54,7 +64,12 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
       "description4": "Press for Coffee, Press for Life.",
       "description5": "Experience Coffee, Unfiltered Joy.",
       "description6": "Elevate Your Coffee Ritual.",
-      "image": "assets/images/cafetiere.png",
+      "image1": "assets/images/cafe1.png",
+      "image2": "assets/images/cafe2.png",
+      "image3": "assets/images/cafe3.png",
+      "image4": "assets/images/cafe4.png",
+      "image5": "assets/images/cafe5.png",
+      "image6": "assets/images/cafe6.png",
     },
   ];
 
@@ -112,149 +127,205 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
   Widget CoffeeDetails() {
     return Container(
       height: MediaQuery.of(context).size.height,
-      child: GridView(
-        gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-        children: [
-          Card(
-            elevation: 4,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    selectedCoffee!["name"]!,
-                    style: textTheme.lightTextTheme.headlineMedium,
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    selectedCoffee!["description1"]!,
-                    style: textTheme.lightTextTheme.bodySmall,
-                  ),
-                ],
+      child: Expanded(
+        child: GridView(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2, childAspectRatio: 0.7),
+          children: [
+            Card(
+              elevation: 4,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15)),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: MediaQuery.of(context).size.height * 0.17,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage(selectedCoffee!["image1"]!))),
+                    ),
+                    Text(
+                      selectedCoffee!["name"]!,
+                      style: textTheme.lightTextTheme.headlineMedium,
+                    ),
+                    SizedBox(height: 5),
+                    Text(
+                      selectedCoffee!["description1"]!,
+                      style: textTheme.lightTextTheme.bodySmall,
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          Card(
-            elevation: 4,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    selectedCoffee!["name"]!,
-                    style: textTheme.lightTextTheme.headlineMedium,
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    selectedCoffee!["description2"]!,
-                    style: textTheme.lightTextTheme.bodySmall,
-                  ),
-                ],
+            Card(
+              elevation: 4,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15)),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: MediaQuery.of(context).size.height * 0.17,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage(selectedCoffee!["image2"]!))),
+                    ),
+                    Text(
+                      selectedCoffee!["name"]!,
+                      style: textTheme.lightTextTheme.headlineMedium,
+                    ),
+                    SizedBox(height: 5),
+                    Text(
+                      selectedCoffee!["description2"]!,
+                      style: textTheme.lightTextTheme.bodySmall,
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          Card(
-            elevation: 4,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    selectedCoffee!["name"]!,
-                    style: textTheme.lightTextTheme.headlineMedium,
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    selectedCoffee!["description3"]!,
-                    style: textTheme.lightTextTheme.bodySmall,
-                  ),
-                ],
+            Card(
+              elevation: 4,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15)),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: MediaQuery.of(context).size.height * 0.17,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage(selectedCoffee!["image3"]!))),
+                    ),
+                    Text(
+                      selectedCoffee!["name"]!,
+                      style: textTheme.lightTextTheme.headlineMedium,
+                    ),
+                    SizedBox(height: 5),
+                    Text(
+                      selectedCoffee!["description3"]!,
+                      style: textTheme.lightTextTheme.bodySmall,
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          Card(
-            elevation: 4,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    selectedCoffee!["name"]!,
-                    style: textTheme.lightTextTheme.headlineMedium,
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    selectedCoffee!["description4"]!,
-                    style: textTheme.lightTextTheme.bodySmall,
-                  ),
-                ],
+            Card(
+              elevation: 4,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15)),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: MediaQuery.of(context).size.height * 0.17,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage(selectedCoffee!["image4"]!))),
+                    ),
+                    Text(
+                      selectedCoffee!["name"]!,
+                      style: textTheme.lightTextTheme.headlineMedium,
+                    ),
+                    SizedBox(height: 5),
+                    Text(
+                      selectedCoffee!["description4"]!,
+                      style: textTheme.lightTextTheme.bodySmall,
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          Card(
-            elevation: 4,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    selectedCoffee!["name"]!,
-                    style: textTheme.lightTextTheme.headlineMedium,
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    selectedCoffee!["description5"]!,
-                    style: textTheme.lightTextTheme.bodySmall,
-                  ),
-                ],
+            Card(
+              elevation: 4,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15)),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: MediaQuery.of(context).size.height * 0.17,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage(selectedCoffee!["image5"]!))),
+                    ),
+                    Text(
+                      selectedCoffee!["name"]!,
+                      style: textTheme.lightTextTheme.headlineMedium,
+                    ),
+                    SizedBox(height: 5),
+                    Text(
+                      selectedCoffee!["description5"]!,
+                      style: textTheme.lightTextTheme.bodySmall,
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          Card(
-            elevation: 4,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    selectedCoffee!["name"]!,
-                    style: textTheme.lightTextTheme.headlineMedium,
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    selectedCoffee!["description6"]!,
-                    style: textTheme.lightTextTheme.bodySmall,
-                  ),
-                ],
+            Card(
+              elevation: 4,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15)),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: MediaQuery.of(context).size.height * 0.17,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage(selectedCoffee!["image6"]!))),
+                    ),
+                    Text(
+                      selectedCoffee!["name"]!,
+                      style: textTheme.lightTextTheme.headlineMedium,
+                    ),
+                    SizedBox(height: 5),
+                    Text(
+                      selectedCoffee!["description6"]!,
+                      style: textTheme.lightTextTheme.bodySmall,
+                    ),
+                  ],
+                ),
               ),
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }
