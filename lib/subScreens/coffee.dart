@@ -19,7 +19,12 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
       "description4": "Instant Boost, Lasting Flavor.",
       "description5": "Elevate Your Coffee Experience.",
       "description6": "Espresso: Your Daily Ritual.",
-      "image": "assets/images/espresso.png",
+      "image1": "assets/images/espresso1.png",
+      "image2": "assets/images/espresso2.png",
+      "image3": "assets/images/espresso3.png",
+      "image4": "assets/images/espresso4.png",
+      "image5": "assets/images/espresso5.png",
+      "image6": "assets/images/espresso6.png",
     },
     {
       "name": "Latte",
@@ -67,12 +72,14 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        CoffeeSelection(),
-        SizedBox(height: 20),
-        if (selectedCoffee != null) CoffeeDetails(),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          CoffeeSelection(),
+          SizedBox(height: 20),
+          if (selectedCoffee != null) CoffeeDetails(),
+        ],
+      ),
     );
   }
 
@@ -172,6 +179,75 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                   SizedBox(height: 5),
                   Text(
                     selectedCoffee!["description3"]!,
+                    style: textTheme.lightTextTheme.bodySmall,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            elevation: 4,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    selectedCoffee!["name"]!,
+                    style: textTheme.lightTextTheme.headlineMedium,
+                  ),
+                  SizedBox(height: 5),
+                  Text(
+                    selectedCoffee!["description4"]!,
+                    style: textTheme.lightTextTheme.bodySmall,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            elevation: 4,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    selectedCoffee!["name"]!,
+                    style: textTheme.lightTextTheme.headlineMedium,
+                  ),
+                  SizedBox(height: 5),
+                  Text(
+                    selectedCoffee!["description5"]!,
+                    style: textTheme.lightTextTheme.bodySmall,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            elevation: 4,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    selectedCoffee!["name"]!,
+                    style: textTheme.lightTextTheme.headlineMedium,
+                  ),
+                  SizedBox(height: 5),
+                  Text(
+                    selectedCoffee!["description6"]!,
                     style: textTheme.lightTextTheme.bodySmall,
                   ),
                 ],
