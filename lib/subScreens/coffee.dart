@@ -1,3 +1,5 @@
+import 'package:coffee_app/subScreens/product1.dart';
+import 'package:coffee_app/subScreens/product2.dart';
 import 'package:flutter/material.dart';
 import 'package:coffee_app/utils/constants/colors.dart';
 import 'package:coffee_app/utils/theme/custom_theme/text_theme.dart';
@@ -136,128 +138,151 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
           height: MediaQuery.of(context).size.height * 1.07,
           child: Expanded(
             child: GridView(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, childAspectRatio: 0.61),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2, childAspectRatio: 0.58),
               children: [
-                Card(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          height: MediaQuery.of(context).size.height * 0.17,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              image: DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image:
-                                      AssetImage(selectedCoffee!["image1"]!))),
-                        ),
-                        Text(
-                          selectedCoffee!["name"]!,
-                          style: textTheme.lightTextTheme.headlineMedium,
-                        ),
-                        SizedBox(height: 5),
-                        Text(
-                          selectedCoffee!["description1"]!,
-                          style: textTheme.lightTextTheme.bodySmall,
-                        ),
-                        const SizedBox(
-                          height: 10.0,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Product1(
+                                  image1: selectedCoffee!["image1"]!,
+                                )));
+                  },
+                  child: Hero(
+                    tag: ImageInfo,
+                    child: Card(
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              selectedCoffee!["price"]!,
-                              style: textTheme.lightTextTheme.bodyLarge,
+                            Container(
+                              height: MediaQuery.of(context).size.height * 0.17,
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  image: DecorationImage(
+                                      fit: BoxFit.cover,
+                                      image: AssetImage(
+                                          selectedCoffee!["image1"]!))),
                             ),
-                            SizedBox(
-                              width: 60,
-                              height: 36,
-                              child: MaterialButton(
-                                onPressed: () {},
-                                child: Icon(
-                                  Icons.add,
-                                  size: 30,
+                            Text(
+                              selectedCoffee!["name"]!,
+                              style: textTheme.lightTextTheme.headlineMedium,
+                            ),
+                            SizedBox(height: 5),
+                            Text(
+                              selectedCoffee!["description1"]!,
+                              style: textTheme.lightTextTheme.bodySmall,
+                            ),
+                            const SizedBox(
+                              height: 10.0,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  selectedCoffee!["price"]!,
+                                  style: textTheme.lightTextTheme.bodyLarge,
                                 ),
-                                color: colors.mainColor,
-                                shape: const RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(30),
-                                        bottomRight: Radius.circular(30))),
-                              ),
+                                SizedBox(
+                                  width: 60,
+                                  height: 36,
+                                  child: MaterialButton(
+                                    onPressed: () {},
+                                    child: Icon(
+                                      Icons.add,
+                                      size: 30,
+                                    ),
+                                    color: colors.mainColor,
+                                    shape: const RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.only(
+                                            topLeft: Radius.circular(30),
+                                            bottomRight: Radius.circular(30))),
+                                  ),
+                                )
+                              ],
                             )
                           ],
-                        )
-                      ],
+                        ),
+                      ),
                     ),
                   ),
                 ),
-                Card(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          height: MediaQuery.of(context).size.height * 0.17,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              image: DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image:
-                                      AssetImage(selectedCoffee!["image2"]!))),
-                        ),
-                        Text(
-                          selectedCoffee!["name"]!,
-                          style: textTheme.lightTextTheme.headlineMedium,
-                        ),
-                        SizedBox(height: 5),
-                        Text(
-                          selectedCoffee!["description2"]!,
-                          style: textTheme.lightTextTheme.bodySmall,
-                        ),
-                        const SizedBox(
-                          height: 10.0,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                InkWell(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) => Product2(image2: selectedCoffee!["image2"]!),
+                    ));
+                  },
+                  child: Hero(
+                    tag: 'ImageInfo2',
+                    child: Card(
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              selectedCoffee!["price"]!,
-                              style: textTheme.lightTextTheme.bodyLarge,
+                            Container(
+                              height: MediaQuery.of(context).size.height * 0.17,
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  image: DecorationImage(
+                                      fit: BoxFit.cover,
+                                      image: AssetImage(
+                                          selectedCoffee!["image2"]!))),
                             ),
-                            SizedBox(
-                              width: 60,
-                              height: 36,
-                              child: MaterialButton(
-                                onPressed: () {},
-                                child: Icon(
-                                  Icons.add,
-                                  size: 30,
+                            Text(
+                              selectedCoffee!["name"]!,
+                              style: textTheme.lightTextTheme.headlineMedium,
+                            ),
+                            SizedBox(height: 5),
+                            Text(
+                              selectedCoffee!["description2"]!,
+                              style: textTheme.lightTextTheme.bodySmall,
+                            ),
+                            const SizedBox(
+                              height: 10.0,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  selectedCoffee!["price"]!,
+                                  style: textTheme.lightTextTheme.bodyLarge,
                                 ),
-                                color: colors.mainColor,
-                                shape: const RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(30),
-                                        bottomRight: Radius.circular(30))),
-                              ),
+                                SizedBox(
+                                  width: 60,
+                                  height: 36,
+                                  child: MaterialButton(
+                                    onPressed: () {},
+                                    child: Icon(
+                                      Icons.add,
+                                      size: 30,
+                                    ),
+                                    color: colors.mainColor,
+                                    shape: const RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.only(
+                                            topLeft: Radius.circular(30),
+                                            bottomRight: Radius.circular(30))),
+                                  ),
+                                )
+                              ],
                             )
                           ],
-                        )
-                      ],
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -305,15 +330,15 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                               height: 36,
                               child: MaterialButton(
                                 onPressed: () {},
-                                child: Icon(
-                                  Icons.add,
-                                  size: 30,
-                                ),
                                 color: colors.mainColor,
                                 shape: const RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(30),
                                         bottomRight: Radius.circular(30))),
+                                child: const Icon(
+                                  Icons.add,
+                                  size: 30,
+                                ),
                               ),
                             )
                           ],
@@ -366,15 +391,15 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                               height: 36,
                               child: MaterialButton(
                                 onPressed: () {},
-                                child: Icon(
-                                  Icons.add,
-                                  size: 30,
-                                ),
                                 color: colors.mainColor,
                                 shape: const RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(30),
                                         bottomRight: Radius.circular(30))),
+                                child: const Icon(
+                                  Icons.add,
+                                  size: 30,
+                                ),
                               ),
                             )
                           ],
@@ -427,15 +452,15 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                               height: 36,
                               child: MaterialButton(
                                 onPressed: () {},
-                                child: Icon(
-                                  Icons.add,
-                                  size: 30,
-                                ),
                                 color: colors.mainColor,
                                 shape: const RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(30),
                                         bottomRight: Radius.circular(30))),
+                                child: const Icon(
+                                  Icons.add,
+                                  size: 30,
+                                ),
                               ),
                             )
                           ],
@@ -488,15 +513,15 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                               height: 36,
                               child: MaterialButton(
                                 onPressed: () {},
-                                child: Icon(
-                                  Icons.add,
-                                  size: 30,
-                                ),
                                 color: colors.mainColor,
                                 shape: const RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(30),
                                         bottomRight: Radius.circular(30))),
+                                child: const Icon(
+                                  Icons.add,
+                                  size: 30,
+                                ),
                               ),
                             )
                           ],
