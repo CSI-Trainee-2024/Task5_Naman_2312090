@@ -35,12 +35,12 @@ class textTheme {
           color: colors.secondaryColor),
       bodyMedium: const TextStyle().copyWith(
           fontSize: 14,
-          fontWeight: FontWeight.normal,
+          fontWeight: FontWeight.w400,
           color: colors.secondaryColor),
       bodySmall: const TextStyle().copyWith(
-          fontSize: 14,
+          fontSize: 30,
           fontWeight: FontWeight.w400,
-          color: colors.secondaryColor.withOpacity(0.7)));
+          color: colors.primaryColor));
 
   static TextTheme darkTextTheme = TextTheme(
       headlineLarge: const TextStyle().copyWith(

@@ -27,7 +27,7 @@ class _homePageState extends State<homePage> {
           decoration: InputDecoration(
               hintText: "Find your coffee...",
               prefixIcon: Icon(Icons.search),
-              hintStyle: textTheme.lightTextTheme.bodySmall,
+              hintStyle: textTheme.lightTextTheme.bodyMedium,
               enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
                   borderSide: const BorderSide(width: 2)),

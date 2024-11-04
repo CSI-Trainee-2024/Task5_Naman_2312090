@@ -148,6 +148,7 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                         MaterialPageRoute(
                             builder: (context) => Product1(
                                   image1: selectedCoffee!["image1"]!,
+                                  name1: selectedCoffee!["name"]!,
                                 )));
                   },
                   child: Hero(
@@ -179,7 +180,7 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                             SizedBox(height: 5),
                             Text(
                               selectedCoffee!["description1"]!,
-                              style: textTheme.lightTextTheme.bodySmall,
+                              style: textTheme.lightTextTheme.bodyMedium,
                             ),
                             const SizedBox(
                               height: 10.0,
@@ -217,9 +218,12 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) => Product2(image2: selectedCoffee!["image2"]!),
-                    ));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              Product2(image2: selectedCoffee!["image2"]!),
+                        ));
                   },
                   child: Hero(
                     tag: 'ImageInfo2',
@@ -250,7 +254,7 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                             SizedBox(height: 5),
                             Text(
                               selectedCoffee!["description2"]!,
-                              style: textTheme.lightTextTheme.bodySmall,
+                              style: textTheme.lightTextTheme.bodyMedium,
                             ),
                             const SizedBox(
                               height: 10.0,
@@ -313,7 +317,7 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                         SizedBox(height: 5),
                         Text(
                           selectedCoffee!["description3"]!,
-                          style: textTheme.lightTextTheme.bodySmall,
+                          style: textTheme.lightTextTheme.bodyMedium,
                         ),
                         const SizedBox(
                           height: 10.0,
@@ -374,7 +378,7 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                         SizedBox(height: 5),
                         Text(
                           selectedCoffee!["description4"]!,
-                          style: textTheme.lightTextTheme.bodySmall,
+                          style: textTheme.lightTextTheme.bodyMedium,
                         ),
                         const SizedBox(
                           height: 10.0,
@@ -435,7 +439,7 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                         SizedBox(height: 5),
                         Text(
                           selectedCoffee!["description5"]!,
-                          style: textTheme.lightTextTheme.bodySmall,
+                          style: textTheme.lightTextTheme.bodyMedium,
                         ),
                         const SizedBox(
                           height: 10.0,
@@ -496,7 +500,7 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                         SizedBox(height: 5),
                         Text(
                           selectedCoffee!["description6"]!,
-                          style: textTheme.lightTextTheme.bodySmall,
+                          style: textTheme.lightTextTheme.bodyMedium,
                         ),
                         const SizedBox(
                           height: 10.0,
