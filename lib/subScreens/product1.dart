@@ -225,6 +225,9 @@ class _Product1State extends State<Product1> {
                 ),
               ),
             ),
+            SizedBox(
+              height: 10,
+            ),
             Row(
               children: [
                 Text(
@@ -245,6 +248,9 @@ class _Product1State extends State<Product1> {
                   colorClickableText: colors.mainColor,
                 ),
               ],
+            ),
+            SizedBox(
+              height: 15,
             ),
             Row(
               children: [
@@ -288,6 +294,9 @@ class _Product1State extends State<Product1> {
                   );
                 }).toList(),
               ),
+            ),
+            SizedBox(
+              height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -336,7 +345,7 @@ class _Product1State extends State<Product1> {
                     ),
                     Row(
                       children: [
-                        CircleAvatar(
+                        const CircleAvatar(
                             backgroundColor: colors.mainColor,
                             child: Column(
                               children: [
@@ -371,12 +380,30 @@ class _Product1State extends State<Product1> {
                 )
               ],
             ),
-            Column(
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  "Price",
-                  style: textTheme.lightTextTheme.headlineSmall,
+                Column(
+                  children: [
+                    Text(
+                      "Price",
+                      style: textTheme.lightTextTheme.headlineSmall,
+                    ),
+                    Text(
+                      widget.price1,
+                      style: textTheme.lightTextTheme.headlineLarge,
+                    )
+                  ],
                 ),
+                ElevatedButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Buy Now",
+                      style: TextStyle(),
+                    ))
               ],
             )
           ],

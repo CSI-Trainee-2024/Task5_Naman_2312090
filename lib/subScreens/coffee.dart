@@ -149,6 +149,7 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                             builder: (context) => Product1(
                                   image1: selectedCoffee!["image1"]!,
                                   name1: selectedCoffee!["name"]!,
+                                  price1:selectedCoffee!["price"]! ,
                                 )));
                   },
                   child: Hero(
