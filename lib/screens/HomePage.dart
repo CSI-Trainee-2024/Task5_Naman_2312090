@@ -12,7 +12,18 @@ class homePage extends StatefulWidget {
 class _homePageState extends State<homePage> {
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return Scaffold(
+      appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(80),
+          child: Container(
+            padding: const EdgeInsets.only(left: 25, right: 25, top: 15),
+            child: AppBar(
+              leading:
+                  IconButton(onPressed: () {}, icon: const Icon(Icons.apps)),
+              actions: const [Icon(Icons.person)],
+            ),
+          )),
+      body: ListView(
       padding: const EdgeInsets.all(20),
       children: [
         Text(
@@ -23,7 +34,7 @@ class _homePageState extends State<homePage> {
           height: 10,
         ),
         TextField(
-         // onChanged: (value) => CoffeeSelection.new.runFilter(value),
+          // onChanged: (value) => CoffeeSelection.new.runFilter(value),
           decoration: InputDecoration(
               hintText: "Find your coffee...",
               prefixIcon: Icon(Icons.search),
@@ -39,6 +50,8 @@ class _homePageState extends State<homePage> {
         ),
         CoffeeSelection(),
       ],
+    ),
     );
+    
   }
 }

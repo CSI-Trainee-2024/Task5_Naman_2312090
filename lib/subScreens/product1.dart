@@ -1,4 +1,5 @@
 import 'package:coffee_app/screens/HomePage.dart';
+import 'package:coffee_app/screens/cartPage.dart';
 import 'package:coffee_app/utils/constants/colors.dart';
 import 'package:coffee_app/utils/theme/custom_theme/text_theme.dart';
 import 'package:flutter/material.dart';
@@ -43,6 +44,21 @@ class _Product1State extends State<Product1> {
     });
   }
 
+  int quantityCount = 0;
+  void decrement() {
+    setState(() {
+      if (quantityCount > 0) {
+        quantityCount--;
+      }
+    });
+  }
+
+  void increment() {
+    setState(() {
+      quantityCount++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,6 +66,7 @@ class _Product1State extends State<Product1> {
         padding: EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Hero(
               tag: ImageInfo,
@@ -228,13 +245,9 @@ class _Product1State extends State<Product1> {
             SizedBox(
               height: 10,
             ),
-            Row(
-              children: [
-                Text(
-                  "Description",
-                  style: textTheme.lightTextTheme.bodyLarge,
-                ),
-              ],
+            Text(
+              "Description",
+              style: textTheme.lightTextTheme.bodyLarge,
             ),
             Wrap(
               children: [
@@ -252,18 +265,15 @@ class _Product1State extends State<Product1> {
             SizedBox(
               height: 15,
             ),
-            Row(
-              children: [
-                Text(
-                  "Choice of Chocalate",
-                  style: textTheme.lightTextTheme.bodyLarge,
-                ),
-              ],
+            Text(
+              "Choice of Chocalate",
+              style: textTheme.lightTextTheme.bodyLarge,
             ),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: chocolateType.map((value) {
                   int index = chocolateType.indexOf(value);
                   return MaterialButton(
@@ -345,34 +355,29 @@ class _Product1State extends State<Product1> {
                     ),
                     Row(
                       children: [
-                        const CircleAvatar(
+                        CircleAvatar(
                             backgroundColor: colors.mainColor,
-                            child: Column(
-                              children: [
-                                Icon(
-                                  Icons.minimize,
-                                  color: colors.primaryColor,
-                                ),
-                                SizedBox(
-                                  height: 1.5,
-                                )
-                              ],
+                            child: IconButton(
+                              icon: Icon(Icons.remove),
+                              color: colors.primaryColor,
+                              onPressed: decrement,
                             )),
                         SizedBox(
                           width: 20.0,
                         ),
                         Text(
-                          "0",
-                          style: textTheme.lightTextTheme.headlineMedium,
+                          quantityCount.toString(),
+                          style: textTheme.lightTextTheme.bodyLarge,
                         ),
                         SizedBox(
                           width: 20.0,
                         ),
                         CircleAvatar(
                             backgroundColor: colors.mainColor,
-                            child: Icon(
-                              Icons.add,
+                            child: IconButton(
+                              icon: Icon(Icons.add),
                               color: colors.primaryColor,
+                              onPressed: increment,
                             )),
                       ],
                     )
@@ -399,10 +404,15 @@ class _Product1State extends State<Product1> {
                   ],
                 ),
                 ElevatedButton(
-                    onPressed: () {},
+                    style: ButtonStyle(
+                        padding: WidgetStatePropertyAll(EdgeInsets.only(
+                            left: 60, right: 60, top: 15, bottom: 15))),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => cartPage()));
+                    },
                     child: Text(
                       "Buy Now",
-                      style: TextStyle(),
                     ))
               ],
             )
