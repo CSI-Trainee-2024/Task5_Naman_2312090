@@ -7,18 +7,18 @@ import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:readmore/readmore.dart';
 
-class Product3 extends StatefulWidget {
-  final String image3;
-  final String name3;
-  final String price3;
+class Product6 extends StatefulWidget {
+  final String image6;
+  final String name6;
+  final String price6;
 
-  Product3({required this.image3, required this.name3, required this.price3});
+  Product6({required this.image6, required this.name6, required this.price6});
 
   @override
-  State<Product3> createState() => _Product3State();
+  State<Product6> createState() => _Product6State();
 }
 
-class _Product3State extends State<Product3> {
+class _Product6State extends State<Product6> {
   // bool isFill = true;
   int indexColor = 0;
   int indexSize = 0;
@@ -69,7 +69,7 @@ class _Product3State extends State<Product3> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Hero(
-              tag: 'ImageInfo2',
+              tag: 'ImageInfo6',
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.5,
                 width: double.infinity,
@@ -77,7 +77,7 @@ class _Product3State extends State<Product3> {
                     borderRadius: BorderRadius.circular(40),
                     image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: AssetImage(widget.image3),
+                      image: AssetImage(widget.image6),
                     )),
                 child: SingleChildScrollView(
                   child: Column(
@@ -145,7 +145,7 @@ class _Product3State extends State<Product3> {
                                             MainAxisAlignment.spaceBetween,
                                         children: [
                                           Text(
-                                            widget.name3,
+                                            widget.name6,
                                             style: textTheme
                                                 .lightTextTheme.bodySmall,
                                           ),
@@ -398,7 +398,7 @@ class _Product3State extends State<Product3> {
                       style: textTheme.lightTextTheme.headlineSmall,
                     ),
                     Text(
-                      widget.price3,
+                      widget.price6,
                       style: textTheme.lightTextTheme.headlineLarge,
                     )
                   ],

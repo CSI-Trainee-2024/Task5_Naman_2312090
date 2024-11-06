@@ -16,8 +16,8 @@ class _BottomNavigationState extends State<BottomNavigation> {
   final List screens = [
     homePage(),
     favouritePage(),
-    //cartPage(),
-    notifPage(),
+    cartPage(),
+    //notifPage(),
     notifPage(),
     profilePage()
   ];
