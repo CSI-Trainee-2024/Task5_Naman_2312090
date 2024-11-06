@@ -367,7 +367,7 @@ class _Product1State extends State<Product1> {
                         ),
                         Text(
                           quantityCount.toString(),
-                          style: textTheme.lightTextTheme.bodyLarge,
+                          style: textTheme.lightTextTheme.headlineMedium,
                         ),
                         SizedBox(
                           width: 20.0,
@@ -413,6 +413,7 @@ class _Product1State extends State<Product1> {
                     },
                     child: Text(
                       "Buy Now",
+                      style: TextStyle(),
                     ))
               ],
             )

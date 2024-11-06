@@ -1,5 +1,6 @@
 import 'package:coffee_app/subScreens/product1.dart';
 import 'package:coffee_app/subScreens/product2.dart';
+import 'package:coffee_app/subScreens/product3.dart';
 import 'package:flutter/material.dart';
 import 'package:coffee_app/utils/constants/colors.dart';
 import 'package:coffee_app/utils/theme/custom_theme/text_theme.dart';
@@ -149,7 +150,7 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                             builder: (context) => Product1(
                                   image1: selectedCoffee!["image1"]!,
                                   name1: selectedCoffee!["name"]!,
-                                  price1:selectedCoffee!["price"]! ,
+                                  price1: selectedCoffee!["price"]!,
                                 )));
                   },
                   child: Hero(
@@ -222,8 +223,11 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>
-                              Product2(image2: selectedCoffee!["image2"]!),
+                          builder: (context) => Product2(
+                            image2: selectedCoffee!["image2"]!,
+                            name2: selectedCoffee!["name"]!,
+                            price2: selectedCoffee!["price"]!,
+                          ),
                         ));
                   },
                   child: Hero(
@@ -291,64 +295,79 @@ class _CoffeeSelectionState extends State<CoffeeSelection> {
                     ),
                   ),
                 ),
-                Card(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          height: MediaQuery.of(context).size.height * 0.17,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              image: DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image:
-                                      AssetImage(selectedCoffee!["image3"]!))),
-                        ),
-                        Text(
-                          selectedCoffee!["name"]!,
-                          style: textTheme.lightTextTheme.headlineMedium,
-                        ),
-                        SizedBox(height: 5),
-                        Text(
-                          selectedCoffee!["description3"]!,
-                          style: textTheme.lightTextTheme.bodyMedium,
-                        ),
-                        const SizedBox(
-                          height: 10.0,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Product3(
+                                  image3: selectedCoffee!["image3"]!,
+                                  name3: selectedCoffee!["name"]!,
+                                  price3: selectedCoffee!["price"]!,
+                                )));
+                  },
+                  child: Hero(
+                    tag: 'ImageInfo3',
+                    child: Card(
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              selectedCoffee!["price"]!,
-                              style: textTheme.lightTextTheme.bodyLarge,
+                            Container(
+                              height: MediaQuery.of(context).size.height * 0.17,
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  image: DecorationImage(
+                                      fit: BoxFit.cover,
+                                      image: AssetImage(
+                                          selectedCoffee!["image3"]!))),
                             ),
-                            SizedBox(
-                              width: 60,
-                              height: 36,
-                              child: MaterialButton(
-                                onPressed: () {},
-                                color: colors.mainColor,
-                                shape: const RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(30),
-                                        bottomRight: Radius.circular(30))),
-                                child: const Icon(
-                                  Icons.add,
-                                  size: 30,
+                            Text(
+                              selectedCoffee!["name"]!,
+                              style: textTheme.lightTextTheme.headlineMedium,
+                            ),
+                            SizedBox(height: 5),
+                            Text(
+                              selectedCoffee!["description3"]!,
+                              style: textTheme.lightTextTheme.bodyMedium,
+                            ),
+                            const SizedBox(
+                              height: 10.0,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  selectedCoffee!["price"]!,
+                                  style: textTheme.lightTextTheme.bodyLarge,
                                 ),
-                              ),
+                                SizedBox(
+                                  width: 60,
+                                  height: 36,
+                                  child: MaterialButton(
+                                    onPressed: () {},
+                                    color: colors.mainColor,
+                                    shape: const RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.only(
+                                            topLeft: Radius.circular(30),
+                                            bottomRight: Radius.circular(30))),
+                                    child: const Icon(
+                                      Icons.add,
+                                      size: 30,
+                                    ),
+                                  ),
+                                )
+                              ],
                             )
                           ],
-                        )
-                      ],
+                        ),
+                      ),
                     ),
                   ),
                 ),
